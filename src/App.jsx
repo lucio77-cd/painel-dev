@@ -11,6 +11,9 @@ export default function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route
+        import Teste from './paginas/Teste.jsx'
+// ...
+<Route path="/teste" element={<RotaProtegida><Teste /></RotaProtegida>} />
         path="/projetos"
         element={
           <RotaProtegida>
