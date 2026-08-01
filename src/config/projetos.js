@@ -1,8 +1,9 @@
 export const projetos = [
   {
     nome: 'BuscaBat',
-    repo: 'lucio77-cd/Busabateria',
-    vercelUrl: 'busabateria.vercel.app',
+    repo: 'lucio77-cd/BuscaBatt',
+    vercelProjectId: 'prj_lMVVMfWa7Mclfj2mLCJY5pdkVX9N',
+    vercelUrl: 'busca-batt.vercel.app',
   },
   {
     nome: 'Linde Guia',
