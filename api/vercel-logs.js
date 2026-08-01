@@ -13,8 +13,12 @@ export default async function handler(req, res) {
       { headers: { Authorization: `Bearer ${process.env.VERCEL_TOKEN}` } }
     )
     const eventos = await resposta.json()
-    // DEBUG: devolve os 3 primeiros eventos crus, sem filtrar
-    res.status(200).json({ amostra: eventos.slice ? eventos.slice(0, 3) : eventos })
+    const textoLog = (Array.isArray(eventos) ? eventos : [])
+      .filter((e) => e.type === 'stdout' || e.type === 'stderr')
+      .map((e) => e.text || '')
+      .join('\n')
+
+    res.status(200).json({ log: textoLog })
   } catch (e) {
     res.status(500).json({ erro: 'falha ao buscar logs', detalhe: e.message })
   }
