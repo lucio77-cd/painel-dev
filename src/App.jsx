@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './paginas/Login.jsx'
 import Teste from './paginas/Teste.jsx'
+import Diagnostico from './paginas/Diagnostico.jsx'
 import { temToken } from './servicos/api.js'
 
 function RotaProtegida({ children }) {
@@ -27,6 +28,14 @@ export default function App() {
         element={
           <RotaProtegida>
             <Teste />
+          </RotaProtegida>
+        }
+      />
+      <Route
+        path="/diagnostico"
+        element={
+          <RotaProtegida>
+            <Diagnostico />
           </RotaProtegida>
         }
       />
