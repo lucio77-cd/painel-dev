@@ -32,7 +32,7 @@ export default function Teste() {
       <button onClick={testarVercelStatus}>Testar</button>
 
       <h3>vercel-logs</h3>
-      <input value={deploymentId} onChange={(e) => setDeploymentId(e.target.value)} placeholder="deploymentId (pegue no resultado do teste acima)" />
+      <input value={deploymentId} onChange={(e) => setDeploymentId(e.target.value)} placeholder="deploymentId" />
       <button onClick={testarVercelLogs}>Testar</button>
 
       <h3>github-arquivo</h3>
